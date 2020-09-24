@@ -8,12 +8,18 @@
 
 body {
   background-color: thistle;
+  display: flex;
+  justify-content: center;
 }
 
 .box {
   border: 1px solid #000;
-  opacity: 0.3;
+  opacity: 0.5;
   flex-shrink: 0;
+}
+
+.all-boxes-container {
+  width: 400px;
 }
 
 .container {
@@ -32,6 +38,10 @@ body {
   background-color: lightcoral;
 }
 
+.med-boxes-container, .small-boxes-container {
+  flex-wrap: wrap;
+}
+
 .med-boxes-container div {
   width: 100px;
   height: 100px;
@@ -45,9 +55,9 @@ body {
 }
 
 /* medium */
-@media (min-width: 600px) {
-  body {
-    background-color: lightgreen;
+@media (min-width: 625px) {
+  .all-boxes-container {
+    width: 600px;
   }
 
   .big-boxes-container {
@@ -58,68 +68,69 @@ body {
   .big-boxes-container div {
     width: 300px;
     height: 300px;
-    background-color: lightcoral;
   }
 
   .med-boxes-container div {
-    width: 100px;
-    height: 100px;
-    background-color: lightgoldenrodyellow;
+    width: 150px;
+    height: 150px;
   }
 
   .small-boxes-container div {
-    width: 50px;
-    height: 50px;
-    background-color: lightgreen;
+    width: 75px;
+    height: 75px;
   }
 }
 
 /* large */
-@media (min-width: 800px) {
-  body {
-    background-color: greenyellow;
+@media (min-width: 825px) {
+  .all-boxes-container {
+    width: 800px;
   }
 
   .big-boxes-container div {
     width: 400px;
     height: 400px;
-    background-color: lightcoral;
   }
 
   .med-boxes-container div {
     width: 200px;
     height: 200px;
-    background-color: lightgoldenrodyellow;
   }
 
   .small-boxes-container div {
     width: 100px;
     height: 100px;
-    background-color: lightgreen;
   }
 }
 
 /* extra large */
-@media (min-width: 1000px) {
-  body {
-    background-color: darkgreen;
+@media (min-width: 1025px) {
+  /* we add a height to the all-boxes-container to use 'display: flex' and add padding */
+  .all-boxes-container {
+    width: 1000px;
+    height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .big-boxes-container {
+    flex-direction: row;
   }
 
   .big-boxes-container div {
-    width: 400px;
-    height: 400px;
-    background-color: lightcoral;
+    width: 250px;
+    height: 250px;
   }
 
   .med-boxes-container div {
-    width: 200px;
-    height: 200px;
-    background-color: lightgoldenrodyellow;
+    width: 125px;
+    height: 125px;
   }
 
   .small-boxes-container div {
-    width: 100px;
-    height: 100px;
-    background-color: lightgreen;
+    width: 62.5px;
+    height: 62.5px;
   }
 }
