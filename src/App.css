@@ -54,4 +54,80 @@ body {
   background-color: lightgreen;
 }
 
-/* media queries here */
+/* medium */
+@media(min-width: 625px) {
+  .all-boxes-container {
+    width: 600px;
+  }
+
+  .big-boxes-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .big-boxes-container div {
+    width: 300px;
+    height: 300px;
+  }
+
+  .med-boxes-container div {
+    width: 150px;
+    height: 150px;
+  }
+
+  .small-boxes-container div {
+    width: 75px;
+    height: 75px;
+  }
+
+}
+
+/* large */
+@media(min-width: 825px) {
+  .all-boxes-container {
+    width: 800px;
+  }
+
+  .big-boxes-container div {
+    width: 400px;
+    height: 400px;
+  }
+
+  .med-boxes-container div {
+    width: 200px;
+    height: 200px;
+  }
+
+  .small-boxes-container div {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+
+/* xtra large */
+@media(min-width: 1025px) {
+  .all-boxes-container {
+    width: 1000px;
+    height: 100vh;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .big-boxes-container div {
+    width: 250px;
+    height: 250px;
+  }
+
+  .med-boxes-container div {
+    width: 125px;
+    height: 125px;;
+  }
+
+  .small-boxes-container div {
+    width: 62.5px;
+    height: 62.5px;
+  }
+}
