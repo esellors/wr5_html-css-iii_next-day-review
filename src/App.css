@@ -1,0 +1,125 @@
+/* mobile first design */
+/* default css is for mobile */
+/* media queries for larger view changes */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: thistle;
+}
+
+.box {
+  border: 1px solid #000;
+  opacity: 0.3;
+  flex-shrink: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.big-boxes-container {
+  flex-direction: column;
+}
+
+.big-boxes-container div {
+  width: 400px;
+  height: 400px;
+  background-color: lightcoral;
+}
+
+.med-boxes-container div {
+  width: 100px;
+  height: 100px;
+  background-color: lightgoldenrodyellow;
+}
+
+.small-boxes-container div {
+  width: 50px;
+  height: 50px;
+  background-color: lightgreen;
+}
+
+/* medium */
+@media (min-width: 600px) {
+  body {
+    background-color: lightgreen;
+  }
+
+  .big-boxes-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .big-boxes-container div {
+    width: 300px;
+    height: 300px;
+    background-color: lightcoral;
+  }
+
+  .med-boxes-container div {
+    width: 100px;
+    height: 100px;
+    background-color: lightgoldenrodyellow;
+  }
+
+  .small-boxes-container div {
+    width: 50px;
+    height: 50px;
+    background-color: lightgreen;
+  }
+}
+
+/* large */
+@media (min-width: 800px) {
+  body {
+    background-color: greenyellow;
+  }
+
+  .big-boxes-container div {
+    width: 400px;
+    height: 400px;
+    background-color: lightcoral;
+  }
+
+  .med-boxes-container div {
+    width: 200px;
+    height: 200px;
+    background-color: lightgoldenrodyellow;
+  }
+
+  .small-boxes-container div {
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+  }
+}
+
+/* extra large */
+@media (min-width: 1000px) {
+  body {
+    background-color: darkgreen;
+  }
+
+  .big-boxes-container div {
+    width: 400px;
+    height: 400px;
+    background-color: lightcoral;
+  }
+
+  .med-boxes-container div {
+    width: 200px;
+    height: 200px;
+    background-color: lightgoldenrodyellow;
+  }
+
+  .small-boxes-container div {
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+  }
+}
